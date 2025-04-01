@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café H2O - Premium Water</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+        body {
+            font-family: 'Playfair Display', serif;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+        .steam {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            animation: steam 3s infinite ease-out;
+        }
+        @keyframes steam {
+            0% { transform: translateY(0) scale(0.5); opacity: 0.8; }
+            100% { transform: translateY(-100px) scale(1.2); opacity: 0; }
+        }
+    </style>
+</head>
+<body class="bg-amber-50">
+    <!-- Header -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="/" class="font-bold text-2xl text-amber-800">Café H2O</a>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="/" class="text-amber-800 hover:text-amber-600">Home</a></li>
+                <li><a href="#products" class="text-amber-800 hover:text-amber-600">Products</a></li>
+                <li><a href="#about" class="text-amber-800 hover:text-amber-600">About</a></li>
+                <li><a href="#contact" class="text-amber-800 hover:text-amber-600">Contact</a></li>
+            </ul>
+            <div class="ml-4 flex items-center">
+                <button class="bg-amber-100 border border-amber-300 rounded-full p-2 hover:bg-amber-200 relative">
+                    <i class="fas fa-shopping-cart text-amber-800"></i>
+                    <span class="absolute -top-1 -right-1 bg-amber-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="text-center px-4">
+            <h1 class="text-5xl font-bold text-white mb-6">Pure Water for Coffee Lovers</h1>
+            <p class="text-xl text-white mb-8">Enhance your coffee experience with our mineral-rich water</p>
+            <button class="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition duration-300">
+                Shop Now
+            </button>
+        </div>
+        
+        <!-- Coffee steam animation -->
+        <div class="steam" style="left: 45%; bottom: 30%;"></div>
+        <div class="steam" style="left: 50%; bottom: 30%; animation-delay: 0.5s;"></div>
+        <div class="steam" style="left: 55%; bottom: 30%; animation-delay: 1s;"></div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-16 px-4">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-amber-800 mb-12">Our Premium Waters</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <img src="https://images.pexels.com/photos/327090/pexels-photo-327090.jpeg" alt="Alpine Spring Water" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-amber-800 mb-2">Alpine Spring</h3>
+                        <p class="text-gray-600 mb-4">Naturally filtered through mountain rocks</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-amber-600">$2.99</span>
+                            <button class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded">
+                                <i class="fas fa-cart-plus mr-2"></i>Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <img src="https://images.pexels.com/photos/416528/pexels-photo-416528.jpeg" alt="Mineral Water" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-amber-800 mb-2">Mineral Rich</h3>
+                        <p class="text-gray-600 mb-4">Enhanced with natural electrolytes</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-amber-600">$3.99</span>
+                            <button class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded">
+                                <i class="fas fa-cart-plus mr-2"></i>Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <img src="https://images.pexels.com/photos/66090/pexels-photo-66090.jpeg" alt="Sparkling Water" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-amber-800 mb-2">Sparkling</h3>
+                        <p class="text-gray-600 mb-4">Perfect pairing for espresso</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-amber-600">$4.99</span>
+                            <button class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded">
+                                <i class="fas fa-cart-plus mr-2"></i>Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-4 bg-amber-100">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-amber-800 mb-12">Our Story</h2>
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2">
+                    <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg" alt="Our Team" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold text-amber-800 mb-4">From Coffee Beans to Water Bottles</h3>
+                    <p class="text-gray-700 mb-4">
+                        Founded by baristas who understood the importance of water quality in brewing the perfect cup, Café H2O brings you water specifically crafted to enhance your coffee experience.
+                    </p>
+                    <p class="text-gray-700">
+                        Our waters are sourced from pristine locations and carefully mineral-balanced to complement different coffee profiles.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-4">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl font-bold text-center text-amber-800 mb-12">Contact Us</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold text-amber-800 mb-4">Visit Our Café</h3>
+                    <p class="text-gray-700 mb-4">
+                        <i class="fas fa-map-marker-alt text-amber-600 mr-2"></i> 123 Brew Street, Coffeeville
+                    </p>
+                    <p class="text-gray-700 mb-4">
+                        <i class="fas fa-phone text-amber-600 mr-2"></i> (123) 456-7890
+                    </p>
+                    <p class="text-gray-700 mb-4">
+                        <i class="fas fa-envelope text-amber-600 mr-2"></i> info@cafeh2o.com
+                    </p>
+                    <div class="mt-6">
+                        <h4 class="text-lg font-semibold text-amber-800 mb-2">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-amber-600 hover:text-amber-800 text-2xl"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-amber-600 hover:text-amber-800 text-2xl"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="text-amber-600 hover:text-amber-800 text-2xl"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-gray-700 mb-1">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 mb-1">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
+                        </div>
+                        <button type="submit" class="bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 rounded-lg transition duration-300">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-amber-800 text-white py-8 px-4">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-2xl font-bold">Café H2O</h3>
+                    <p class="text-amber-200">Pure water for coffee enthusiasts</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-amber-300">Home</a>
+                    <a href="#products" class="hover:text-amber-300">Products</a>
+                    <a href="#about" class="hover:text-amber-300">About</a>
+                    <a href="#contact" class="hover:text-amber-300">Contact</a>
+                </div>
+            </div>
+            <div class="border-t border-amber-700 mt-6 pt-6 text-center text-amber-200">
+                <p>&copy; 2023 Café H2O. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple form validation
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            if(name && email && message) {
+                alert('Thank you for your message! We will get back to you soon.');
+                this.reset();
+            } else {
+                alert('Please fill in all fields.');
+            }
+        });
+
+        // Add to cart functionality
+        document.querySelectorAll('button:contains("Add to Cart")').forEach(button => {
+            button.addEventListener('click', function() {
+                const cartCount = document.querySelector('.fa-shopping-cart').nextElementSibling;
+                let count = parseInt(cartCount.textContent);
+                cartCount.textContent = count + 1;
+                
+                // Animation
+                this.innerHTML = '<i class="fas fa-check mr-2"></i>Added!';
+                setTimeout(() => {
+                    this.innerHTML = '<i class="fas fa-cart-plus mr-2"></i>Add to Cart';
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+</html>
